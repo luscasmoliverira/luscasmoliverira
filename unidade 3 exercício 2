@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    // Loop de 10 até 1
+    for(i = 10; i >= 1; i--) {
+        printf("%d\n", i); // Imprime o número atual
+    }
+
+    return 0;
+}
