@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int senha_correta[4] = {1, 2, 3, 4}; // Senha correta
+    int senha_digitada[4]; // Senha digitada pelo usuário
+    int i;
+
+    while(1) {
+        printf("Digite a senha (quatro números inteiros separados por espaço): ");
+        // Recebe a senha digitada pelo usuário
+        scanf("%d %d %d %d", &senha_digitada[0], &senha_digitada[1], &senha_digitada[2], &senha_digitada[3]);
+
+        // Verifica se a senha está correta
+        int senha_correta_flag = 1; // Flag para verificar se a senha está correta
+        for(i = 0; i < 4; i++) {
+            if(senha_digitada[i] != senha_correta[i]) {
+                senha_correta_flag = 0;
+                break;
+            }
+        }
+
+        // Se a senha estiver correta, imprime "Senha Correta" e sai do loop
+        if(senha_correta_flag) {
+            printf("Senha Correta\n");
+            break;
+        } else {
+            printf("Senha Incorreta. Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
